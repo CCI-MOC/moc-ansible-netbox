@@ -72,6 +72,7 @@
     - name: "Calcuate rack and rackpos"
       set_fact:
         rack: "{{ 'row3/podB/cage' + parsed_address[-2] }}"
+        rack_number: "{{ parsed_address[-2] }}"
         rackpos: "{{ parsed_address[-1] }}"
       vars:
         parsed_address: "{{ ipmi_addr.stdout | split('.') }}"
@@ -260,6 +261,6 @@
             name: IPMI Interface
           termination_b_type: dcim.interface
           termination_b:
-            device: ipmi-cage{{ rack }}
+            device: ipmi-cage{{ rack_number }}
             name: GigabitEthernet 1/1/{{ rackpos }}
       delegate_to: 127.0.0.1
