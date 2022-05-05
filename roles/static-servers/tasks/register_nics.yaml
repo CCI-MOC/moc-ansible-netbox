@@ -1,0 +1,46 @@
+- name: Register NIC
+  netbox.netbox.netbox_device_interface:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      device: "{{ item.1.name }}"
+      name: "{{ nic.name }}"
+      mac_address: "{{ nic.mac_address }}"
+      type: "{{ nic.type | default('SFP+ (10GE)') }}"
+    state: present
+  when: nic.mac_address is defined
+  loop: "{{ item.1.nics }}"
+  loop_control:
+    loop_var: nic
+
+- name: Register NIC without mac addresses
+  netbox.netbox.netbox_device_interface:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      device: "{{ item.1.name }}"
+      name: "{{ nic.name }}"
+      type: "{{ nic.type | default('SFP+ (10GE)') }}"
+    state: present
+  when: nic.mac_address is not defined
+  loop: "{{ item.1.nics }}"
+  loop_control:
+    loop_var: nic
+
+- name: Create cable to switchport
+  netbox.netbox.netbox_cable:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      termination_a_type: dcim.interface
+      termination_a:
+        device: "{{ item.1.name }}"
+        name: "{{ nic.name }}"
+      termination_b_type: dcim.interface
+      termination_b:
+        device: "{{ nic.switch_hostname }}"
+        name: "{{ nic.switchport }}"
+    state: present
+  loop: "{{ item.1.nics }}"
+  loop_control:
+    loop_var: nic

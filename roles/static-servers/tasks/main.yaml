@@ -1,0 +1,11 @@
+- name: Register system
+  include_tasks: register_servers.yaml
+  loop: "{{ netbox_servers|subelements('servers') }}"
+  loop_control:
+    label: "{{ item.1.name }}"
+
+- name: Register NICs
+  include_tasks: register_nics.yaml
+  loop: "{{ netbox_servers|subelements('servers') }}"
+  loop_control:
+    label: "{{ item.1.name }}"
