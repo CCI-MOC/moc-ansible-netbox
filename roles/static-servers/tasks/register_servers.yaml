@@ -1,0 +1,73 @@
+- name: Create manufacturer
+  netbox.netbox.netbox_manufacturer:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ server.1.manufacturer }}"
+    state: present
+
+- name: Create the device_type
+  netbox.netbox.netbox_device_type:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      manufacturer: "{{ server.1.manufacturer }}"
+      model: "{{ server.1.model }}"
+      u_height: "{{ server.1.height }}"
+      subdevice_role: "child"
+    state: present
+  when: server.1.height == 0
+
+- name: Create the device_type
+  netbox.netbox.netbox_device_type:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      manufacturer: "{{ server.1.manufacturer }}"
+      model: "{{ server.1.model }}"
+      u_height: "{{ server.1.height }}"
+    state: present
+  when: server.1.height !=0
+
+- name: Create device role
+  netbox.netbox.netbox_device_role:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ server.1.role }}"
+    state: present
+
+- name: Register system in netbox
+  netbox.netbox.netbox_device:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ server.1.name }}"
+      device_type: "{{ server.1.model }}"
+      location: "{{ server.0.location }}"
+      rack: "{{ server.0.rack }}"
+      device_role: "{{ server.1.role }}"
+      site: "{{ server.0.site }}"
+    state: present
+
+- name: Set device's position within rack
+  netbox.netbox.netbox_device:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      name: "{{ server.1.name }}"
+      position: "{{ server.1.rackpos }}"
+      face: front
+    state: present
+  when: server.1.parent_device is not defined
+
+- name: Add device to bay
+  netbox.netbox.netbox_device_bay:
+    netbox_url: "{{ netbox_url }}"
+    netbox_token: "{{ netbox_token }}"
+    data:
+      installed_device: "{{ server.1.name }}"
+      name: "{{ server.1.parent_device_bay }}"
+      device: "{{ server.1.parent_device }}"
+    state: present
+  when: server.1.parent_device is defined
