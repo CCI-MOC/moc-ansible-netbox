@@ -12,6 +12,7 @@
   loop: "{{ server.1.nics }}"
   loop_control:
     loop_var: nic
+    label: "{{ nic.name }}"
 
 - name: Register NIC without mac addresses
   netbox.netbox.netbox_device_interface:
@@ -26,6 +27,7 @@
   loop: "{{ server.1.nics }}"
   loop_control:
     loop_var: nic
+    label: "{{ nic.name }}"
 
 - name: Create cable to switchport
   netbox.netbox.netbox_cable:
@@ -44,3 +46,4 @@
   loop: "{{ server.1.nics }}"
   loop_control:
     loop_var: nic
+    label: "{{ nic.name }}"
