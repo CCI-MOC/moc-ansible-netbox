@@ -1,67 +1,2486 @@
 netbox_servers:
-  - site: MGHPCC
-    location: Row3/PodB
-    rack: Row3/PodB/Cage3
-    servers:
-      - name: neu-3-1
-        manufacturer: Dell Inc.
-        model: PowerEdge R620
-        role: BMI
-        rackpos: 1
-        height: 1
-        nics:
-          - name: nic1
-            mac_address: 00:0f:53:22:2d:88
-            switch_hostname: rbr-03
-            switchport: TenGigabitEthernet 3/0/1
-          - name: nic2
-            mac_address: 00:0f:53:22:2d:89
-            switch_hostname: rbr-03
-            switchport: TenGigabitEthernet 3/0/2
-          - name: ipmi
-            switch_hostname: ipmi-cage3
-            switchport: GigabitEthernet 1/1/1
-            type: 1000Base-t (1GE)
-      - name: neu-3-2
-        manufacturer: Dell Inc.
-        model: PowerEdge R620
-        role: BMI
-        rackpos: 2
-        height: 1
-        nics:
-          - name: nic1
-            mac_address: 00:0f:53:22:2e:78
-            switch_hostname: rbr-03
-            switchport: TenGigabitEthernet 3/0/3
-          - name: nic2
-            mac_address: 00:0f:53:22:2d:89
-            switch_hostname: rbr-03
-            switchport: TenGigabitEthernet 3/0/4
-          - name: ipmi
-            switch_hostname: ipmi-cage3
-            switchport: GigabitEthernet 1/1/2
-            type: 1000Base-t (1GE)
-
-  - site: MGHPCC
-    location: Row3/PodB
-    rack: Row3/PodB/Cage5
-    servers:
-      - name: neu-5-24
-        manufacturer: Cisco
-        model: U220
-        role: BMI
-        rackpos: 24
-        height: 1
-        nics:
-          - name: nic1
-            mac_address: 90:e2:ba:82:33:24
-            switch_hostname: rbr-06
-            switchport: TenGigabitEthernet 6/0/8
-          - name: nic2
-            mac_address: 90:e2:ba:82:33:25
-            switch_hostname: rbr-06
-            switchport: TenGigabitEthernet 6/0/7
-          - name: ipmi
-            switch_hostname: ipmi-cage5
-            switchport: GigabitEthernet 1/1/24
-            type: 1000Base-t (1GE)
+- location: Row3/PodB
+  rack: Row3/PodB/Cage3
+  servers:
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-1
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/1
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:22:2d:88
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/1
+    - mac_address: 00:0f:53:22:2d:89
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/2
+    rack: '3'
+    rackpos: '1'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-10
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/10
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:8c:c0
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/19
+    - mac_address: 90:e2:ba:ad:8c:c1
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/20
+    rack: '3'
+    rackpos: '10'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-11
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/11
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:8e:1c
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/21
+    - mac_address: 90:e2:ba:ad:8e:1d
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/22
+    rack: '3'
+    rackpos: '11'
+    role: openshift
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-3-12
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/12
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:0d:b3:40
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/24
+    - mac_address: 00:0f:53:0d:b3:41
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/23
+    rack: '3'
+    rackpos: '12'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-3-13
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/13
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:0c:46:a0
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/26
+    - mac_address: 00:0f:53:0c:46:a1
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/25
+    rack: '3'
+    rackpos: '13'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-3-14
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/14
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:98:21:21
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/28
+    - mac_address: d4:ae:52:98:21:1f
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/27
+    rack: '3'
+    rackpos: '14'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-2
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/2
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:22:2e:78
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/3
+    - mac_address: 00:0f:53:22:2e:79
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/4
+    rack: '3'
+    rackpos: '2'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-21
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/21
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:1c:e8:1c
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/1
+    - mac_address: 90:b1:1c:1c:e8:1e
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/2
+    rack: '3'
+    rackpos: '21'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-22
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/22
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:94:d3:7b
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/3
+    - mac_address: d4:ae:52:94:d3:7d
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/4
+    rack: '3'
+    rackpos: '22'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-23
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/23
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:92:80:28
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/5
+    - mac_address: d4:ae:52:92:80:2a
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/6
+    rack: '3'
+    rackpos: '23'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-3-24
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/24
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:2e:c4
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/8
+    - mac_address: 90:e2:ba:82:2e:c5
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/7
+    rack: '3'
+    rackpos: '24'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-3-25
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/25
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:32:14
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/10
+    - mac_address: 90:e2:ba:82:32:15
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/9
+    rack: '3'
+    rackpos: '25'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-3-26
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/26
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:2e:bc
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/12
+    - mac_address: 90:e2:ba:82:2e:bd
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/11
+    rack: '3'
+    rackpos: '26'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-3-27
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/27
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:2f:44
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/14
+    - mac_address: 90:e2:ba:82:2f:45
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/13
+    rack: '3'
+    rackpos: '27'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-3-28
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/28
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:33:2c
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/16
+    - mac_address: 90:e2:ba:82:33:2d
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/15
+    rack: '3'
+    rackpos: '28'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-3-29
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/29
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:84:d7:38
+      name: nic1
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/18
+    - mac_address: 90:e2:ba:84:d7:39
+      name: nic2
+      switch_hostname: rbr-04
+      switchport: TenGigabitEthernet 4/0/17
+    rack: '3'
+    rackpos: '29'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-3
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/3
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:92:80:eb
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/5
+    - mac_address: d4:ae:52:92:80:ed
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/6
+    rack: '3'
+    rackpos: '3'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-4
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/4
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:1c:ff:af
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/7
+    - mac_address: 90:b1:1c:1c:ff:b1
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/8
+    rack: '3'
+    rackpos: '4'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-5
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/5
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:98:22:25
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/9
+    - mac_address: d4:ae:52:98:22:27
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/10
+    rack: '3'
+    rackpos: '5'
+    role: curator-openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-6
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/6
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:21:af:48
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/11
+    - mac_address: 90:b1:1c:21:af:4a
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/12
+    rack: '3'
+    rackpos: '6'
+    role: moc-infra
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-7
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/7
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:43:42:91
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/13
+    - mac_address: 90:b1:1c:43:42:93
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/14
+    rack: '3'
+    rackpos: '7'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-8
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/8
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:22:8e:00
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/15
+    - mac_address: 00:0f:53:22:8e:01
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/16
+    rack: '3'
+    rackpos: '8'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-3-9
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage3
+      switchport: GigabitEthernet 1/1/9
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:99:00
+      name: nic1
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/17
+    - mac_address: 90:e2:ba:ad:99:01
+      name: nic2
+      switch_hostname: rbr-03
+      switchport: TenGigabitEthernet 3/0/18
+    rack: '3'
+    rackpos: '9'
+    role: BMI
+  site: MGHPCC
+- location: Row3/PodB
+  rack: Row3/PodB/Cage5
+  servers:
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-1
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/1
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:43:3a:4a
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/1
+    - mac_address: 90:b1:1c:43:3a:4c
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/2
+    rack: '5'
+    rackpos: '1'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-10
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/10
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:28:10:90
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/19
+    - mac_address: 00:0f:53:28:10:91
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/20
+    rack: '5'
+    rackpos: '10'
+    role: openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-11
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/11
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:8d:04
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/21
+    - mac_address: 90:e2:ba:ad:8d:05
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/22
+    rack: '5'
+    rackpos: '11'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-5-12
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/12
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:0d:b3:1c
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/24
+    - mac_address: 00:0f:53:0d:b3:1d
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/23
+    rack: '5'
+    rackpos: '12'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-5-13
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/13
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:0d:cd:31
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/26
+    - mac_address: 00:0f:53:0d:cd:30
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/25
+    rack: '5'
+    rackpos: '13'
+    role: openshift-staging
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-2
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/2
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:42:c6:c2
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/3
+    - mac_address: 90:b1:1c:42:c6:c4
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/4
+    rack: '5'
+    rackpos: '2'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-21
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/21
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:8c:14
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/1
+    - mac_address: 90:e2:ba:ad:8c:15
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/2
+    rack: '5'
+    rackpos: '21'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-22
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/22
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:91:14
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/3
+    - mac_address: 90:e2:ba:ad:91:15
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/4
+    rack: '5'
+    rackpos: '22'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-23
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/23
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:9a:b5:60
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/5
+    - mac_address: d4:ae:52:9a:b5:62
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/6
+    rack: '5'
+    rackpos: '23'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-5-24
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/24
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:33:24
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/8
+    - mac_address: 90:e2:ba:82:33:25
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/7
+    rack: '5'
+    rackpos: '24'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-5-25
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/25
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:30:00
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/10
+    - mac_address: 90:e2:ba:82:30:01
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/9
+    rack: '5'
+    rackpos: '25'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-5-26
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/26
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:32:cc
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/12
+    - mac_address: 90:e2:ba:82:32:cd
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/11
+    rack: '5'
+    rackpos: '26'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-5-27
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/27
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:34:30
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/14
+    - mac_address: 90:e2:ba:82:34:31
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/13
+    rack: '5'
+    rackpos: '27'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-5-28
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/28
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:84:d7:30
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/16
+    - mac_address: 90:e2:ba:84:d7:31
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/15
+    rack: '5'
+    rackpos: '28'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-5-29
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/29
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:30:74
+      name: nic1
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/18
+    - mac_address: 90:e2:ba:82:30:75
+      name: nic2
+      switch_hostname: rbr-06
+      switchport: TenGigabitEthernet 6/0/17
+    rack: '5'
+    rackpos: '29'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-3
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/3
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:24:1a:b1
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/6
+    - mac_address: 00:0f:53:24:1a:b0
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/5
+    rack: '5'
+    rackpos: '3'
+    role: openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-4
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/4
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:42:ec:4e
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/7
+    - mac_address: 90:b1:1c:42:ec:50
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/8
+    rack: '5'
+    rackpos: '4'
+    role: openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-5
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/5
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:98:61:25
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/9
+    - mac_address: d4:ae:52:98:61:27
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/10
+    rack: '5'
+    rackpos: '5'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-6
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/6
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:3a:1d:3c
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/12
+    - mac_address: 90:b1:1c:3a:1d:3a
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/11
+    rack: '5'
+    rackpos: '6'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-7
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/7
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:89:40
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/13
+    - mac_address: 90:e2:ba:ad:89:41
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/14
+    rack: '5'
+    rackpos: '7'
+    role: curator-openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-8
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/8
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:99:20
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/15
+    - mac_address: 90:e2:ba:ad:99:21
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/16
+    rack: '5'
+    rackpos: '8'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-5-9
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage5
+      switchport: GigabitEthernet 1/1/9
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:8c:00
+      name: nic1
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/17
+    - mac_address: 90:e2:ba:ad:8c:01
+      name: nic2
+      switch_hostname: rbr-05
+      switchport: TenGigabitEthernet 5/0/18
+    rack: '5'
+    rackpos: '9'
+    role: BMI
+  site: MGHPCC
+- location: Row3/PodB
+  rack: Row3/PodB/Cage15
+  servers:
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-1
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/1
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:98:0e:e6
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/1
+    - mac_address: d4:ae:52:98:0e:e8
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/2
+    rack: '15'
+    rackpos: '1'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-10
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/10
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:22:94:30
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/19
+    - mac_address: 00:0f:53:22:94:31
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/20
+    rack: '15'
+    rackpos: '10'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-11
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/11
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:94:7c
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/21
+    - mac_address: 90:e2:ba:ad:94:7d
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/22
+    rack: '15'
+    rackpos: '11'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-16
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/16
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:34:b8
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/32
+    - mac_address: 90:e2:ba:82:34:b9
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/31
+    rack: '15'
+    rackpos: '16'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-17
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/17
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:84:d5:70
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/34
+    - mac_address: 90:e2:ba:84:d5:71
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/33
+    rack: '15'
+    rackpos: '17'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-18
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/18
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:35:f0
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/36
+    - mac_address: 90:e2:ba:82:35:f1
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/35
+    rack: '15'
+    rackpos: '18'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-19
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/19
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:69:4c
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/38
+    - mac_address: 90:e2:ba:87:69:4d
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/37
+    rack: '15'
+    rackpos: '19'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-15-2
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/2
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:94:d5:a3
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/3
+    - mac_address: d4:ae:52:94:d5:a5
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/4
+    rack: '15'
+    rackpos: '2'
+    role: moc-infra
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-20
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/20
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:37:90
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/40
+    - mac_address: 90:e2:ba:82:37:91
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/39
+    rack: '15'
+    rackpos: '20'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-21
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/21
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:1d:33:7a
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/1
+    - mac_address: 90:b1:1c:1d:33:7c
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/2
+    rack: '15'
+    rackpos: '21'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-22
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/22
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:8b:a0
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/3
+    - mac_address: 90:e2:ba:ad:8b:a1
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/4
+    rack: '15'
+    rackpos: '22'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-23
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/23
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:9a:bb:c9
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/5
+    - mac_address: d4:ae:52:9a:bb:cb
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/6
+    rack: '15'
+    rackpos: '23'
+    role: research-ceph
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-26
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/26
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:37:84
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/12
+    - mac_address: 90:e2:ba:82:37:85
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/11
+    rack: '15'
+    rackpos: '26'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-27
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/27
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:35:2c
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/14
+    - mac_address: 90:e2:ba:82:35:2d
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/13
+    rack: '15'
+    rackpos: '27'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-28
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/28
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:32:c8
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/16
+    - mac_address: 90:e2:ba:82:32:c9
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/15
+    rack: '15'
+    rackpos: '28'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-29
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/29
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:69:08
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/18
+    - mac_address: 90:e2:ba:87:69:09
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/17
+    rack: '15'
+    rackpos: '29'
+    role: curator-openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-3
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/3
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:24:9b:01
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/5
+    - mac_address: 00:0f:53:24:9b:00
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/6
+    rack: '15'
+    rackpos: '3'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-30
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/30
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:67:78
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/20
+    - mac_address: 90:e2:ba:87:67:79
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/19
+    rack: '15'
+    rackpos: '30'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-31
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/31
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:36:94
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/22
+    - mac_address: 90:e2:ba:82:36:95
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/21
+    rack: '15'
+    rackpos: '31'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-32
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/32
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:68:08
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/24
+    - mac_address: 90:e2:ba:87:68:09
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/23
+    rack: '15'
+    rackpos: '32'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-15-33
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/33
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:67:54
+      name: nic1
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/26
+    - mac_address: 90:e2:ba:87:67:55
+      name: nic2
+      switch_hostname: rbr-02
+      switchport: TenGigabitEthernet 2/0/25
+    rack: '15'
+    rackpos: '33'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-4
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/4
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:28:61:80
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/7
+    - mac_address: 00:0f:53:28:61:81
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/8
+    rack: '15'
+    rackpos: '4'
+    role: openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-5
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/5
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:a5:0c:c4
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/9
+    - mac_address: d4:ae:52:a5:0c:c6
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/10
+    rack: '15'
+    rackpos: '5'
+    role: curator-openshift
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-6
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/6
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:9b:2b:d9
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/11
+    - mac_address: d4:ae:52:9b:2b:db
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/12
+    rack: '15'
+    rackpos: '6'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-7
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/7
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:43:33:e0
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/14
+    - mac_address: 90:b1:1c:43:33:de
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/13
+    rack: '15'
+    rackpos: '7'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-8
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/8
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:96:d4
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/15
+    - mac_address: 90:e2:ba:ad:96:d5
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/16
+    rack: '15'
+    rackpos: '8'
+    role: BMI
+  - height: '1'
+    manufacturer: Dell Inc.
+    model: PowerEdge R620
+    name: neu-15-9
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage15
+      switchport: GigabitEthernet 1/1/9
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:22:2f:d9
+      name: nic2
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/18
+    - mac_address: 00:0f:53:22:2f:d8
+      name: nic1
+      switch_hostname: rbr-01
+      switchport: TenGigabitEthernet 1/0/17
+    rack: '15'
+    rackpos: '9'
+    role: openshift
+  site: MGHPCC
+- location: Row3/PodB
+  rack: Row3/PodB/Cage17
+  servers:
+  - height: '1'
+    manufacturer: Lenovo
+    model: lenovo-x3550-M5
+    name: neu-17-10
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/10
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:c7:cc:88
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/20
+    - mac_address: 90:e2:ba:c7:cc:89
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/19
+    rack: '17'
+    rackpos: '10'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-17-12
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/12
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:83:2c
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/24
+    - mac_address: 90:e2:ba:ad:83:2d
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/23
+    rack: '17'
+    rackpos: '12'
+    role: openshift
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-23
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/23
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:2d:90
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/6
+    - mac_address: 90:e2:ba:82:2d:91
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/5
+    rack: '17'
+    rackpos: '23'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-24
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/24
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:32:2c
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/8
+    - mac_address: 90:e2:ba:82:32:2d
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/7
+    rack: '17'
+    rackpos: '24'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-25
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/25
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:35:c8
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/10
+    - mac_address: 90:e2:ba:82:35:c9
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/9
+    rack: '17'
+    rackpos: '25'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-26
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/26
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:68:10
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/12
+    - mac_address: 90:e2:ba:87:68:11
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/11
+    rack: '17'
+    rackpos: '26'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-27
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/27
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:91:84
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/14
+    - mac_address: 90:e2:ba:ad:91:85
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/13
+    rack: '17'
+    rackpos: '27'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-28
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/28
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:84:d7:b8
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/16
+    - mac_address: 90:e2:ba:84:d7:b9
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/15
+    rack: '17'
+    rackpos: '28'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-29
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/29
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:84:d7:5c
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/18
+    - mac_address: 90:e2:ba:84:d7:5d
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/17
+    rack: '17'
+    rackpos: '29'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-30
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/30
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:36:8c
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/20
+    - mac_address: 90:e2:ba:82:36:8d
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/19
+    rack: '17'
+    rackpos: '30'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-31
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/31
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:34:ac
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/22
+    - mac_address: 90:e2:ba:82:34:ad
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/21
+    rack: '17'
+    rackpos: '31'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-32
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/32
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:66:40
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/24
+    - mac_address: 90:e2:ba:87:66:41
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/23
+    rack: '17'
+    rackpos: '32'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-17-33
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/33
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:8e:bd:64
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/26
+    - mac_address: 90:e2:ba:8e:bd:65
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/25
+    rack: '17'
+    rackpos: '33'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-17-34
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/34
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:0d:7b:85
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/27
+    - mac_address: 00:0f:53:0d:7b:84
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/28
+    rack: '17'
+    rackpos: '34'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-17-35
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/35
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:0c:45:79
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/29
+    - mac_address: 00:0f:53:0c:45:78
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/30
+    rack: '17'
+    rackpos: '35'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-17-36
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/36
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:98:15:0d
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/31
+    - mac_address: d4:ae:52:98:15:0f
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/32
+    rack: '17'
+    rackpos: '36'
+    role: moc-infra
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-17-37
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/37
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:98:1a:1c
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/33
+    - mac_address: d4:ae:52:98:1a:1e
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/34
+    rack: '17'
+    rackpos: '37'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-17-38
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/38
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:21:96:39
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/35
+    - mac_address: 90:b1:1c:21:96:3b
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/36
+    rack: '17'
+    rackpos: '38'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-17-39
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/39
+      type: 1000Base-t (1GE)
+    - mac_address: 00:0f:53:0d:f7:28
+      name: nic1
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/38
+    - mac_address: 00:0f:53:0d:f7:29
+      name: nic2
+      switch_hostname: rbr-08
+      switchport: TenGigabitEthernet 8/0/37
+    rack: '17'
+    rackpos: '39'
+    role: openshift-staging
+  - height: '1'
+    manufacturer: Lenovo
+    model: lenovo-x3550-M5
+    name: neu-17-6
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/6
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:c7:cd:c8
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/12
+    - mac_address: 90:e2:ba:c7:cd:c9
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/11
+    rack: '17'
+    rackpos: '6'
+    role: BMI
+  - height: '1'
+    manufacturer: Lenovo
+    model: lenovo-x3550-M5
+    name: neu-17-7
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/7
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:c7:d3:54
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/14
+    - mac_address: 90:e2:ba:c7:d3:55
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/13
+    rack: '17'
+    rackpos: '7'
+    role: BMI
+  - height: '2'
+    manufacturer: Intel Corporation
+    model: S2600WTT
+    name: neu-17-8
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage17
+      switchport: GigabitEthernet 1/1/8
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:96:60
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/16
+    - mac_address: 90:e2:ba:ad:96:61
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet1/15
+    - mac_address: 00:00:00:00:00:00
+      name: FPGA-nic
+      switch_hostname: MOC-NEU-PODB-R3C17-1
+      switchport: Ethernet2/4
+    rack: '17'
+    rackpos: '8'
+    role: maas
+  site: MGHPCC
+- location: Row3/PodB
+  rack: Row3/PodB/Cage19
+  servers:
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-23
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/23
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:32:68
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/6
+    - mac_address: 90:e2:ba:82:32:69
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/5
+    rack: '19'
+    rackpos: '23'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-24
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/24
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:2f:7c
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/8
+    - mac_address: 90:e2:ba:82:2f:7d
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/7
+    rack: '19'
+    rackpos: '24'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-25
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/25
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:ad:89:78
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/10
+    - mac_address: 90:e2:ba:ad:89:79
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/9
+    rack: '19'
+    rackpos: '25'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-26
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/26
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:33:48
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/12
+    - mac_address: 90:e2:ba:82:33:49
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/11
+    rack: '19'
+    rackpos: '26'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-27
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/27
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:87:65:a4
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/14
+    - mac_address: 90:e2:ba:87:65:a5
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/13
+    rack: '19'
+    rackpos: '27'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-28
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/28
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:2e:f8
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/16
+    - mac_address: 90:e2:ba:82:2e:f9
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/15
+    rack: '19'
+    rackpos: '28'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-29
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/29
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:8a:a1:60
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/18
+    - mac_address: 90:e2:ba:8a:a1:61
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/17
+    rack: '19'
+    rackpos: '29'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-30
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/30
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:2f:e0
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/20
+    - mac_address: 90:e2:ba:82:2f:e1
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/19
+    rack: '19'
+    rackpos: '30'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-31
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/31
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:34:94
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/22
+    - mac_address: 90:e2:ba:82:34:95
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/21
+    rack: '19'
+    rackpos: '31'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-32
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/32
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:32:94
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/24
+    - mac_address: 90:e2:ba:82:32:95
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/23
+    rack: '19'
+    rackpos: '32'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-19-33
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/33
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:21:3d:3f
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/25
+    - mac_address: 90:b1:1c:21:3d:41
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/26
+    rack: '19'
+    rackpos: '33'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-19-34
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/34
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:3a:15:7d
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/27
+    - mac_address: 90:b1:1c:3a:15:7f
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/28
+    rack: '19'
+    rackpos: '34'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-19-35
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/35
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:af:d1:c8
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/29
+    - mac_address: d4:ae:52:af:d1:ca
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/30
+    rack: '19'
+    rackpos: '35'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-19-36
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/36
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:9b:1d:42
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/31
+    - mac_address: d4:ae:52:9b:1d:44
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/32
+    rack: '19'
+    rackpos: '36'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-19-37
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/37
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:9b:2d:28
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/33
+    - mac_address: d4:ae:52:9b:2d:2a
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/34
+    rack: '19'
+    rackpos: '37'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-19-38
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/38
+      type: 1000Base-t (1GE)
+    - mac_address: d4:ae:52:9a:b7:80
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/35
+    - mac_address: d4:ae:52:9a:b7:82
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/36
+    rack: '19'
+    rackpos: '38'
+    role: BMI
+  - height: '1'
+    manufacturer: Generic
+    model: '"dell-r620"'
+    name: neu-19-39
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/39
+      type: 1000Base-t (1GE)
+    - mac_address: 90:b1:1c:42:db:de
+      name: nic1
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/37
+    - mac_address: 90:b1:1c:42:db:e0
+      name: nic2
+      switch_hostname: rbr-07
+      switchport: TenGigabitEthernet 7/0/38
+    rack: '19'
+    rackpos: '39'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-6
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/6
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:9f:90:b0
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C19-1
+      switchport: Ethernet1/12
+    - mac_address: 90:e2:ba:9f:90:b1
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C19-1
+      switchport: Ethernet1/11
+    rack: '19'
+    rackpos: '6'
+    role: BMI
+  - height: '1'
+    manufacturer: Cisco
+    model: C220
+    name: neu-19-7
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/7
+      type: 1000Base-t (1GE)
+    - mac_address: 90:e2:ba:82:34:e4
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C19-1
+      switchport: Ethernet1/14
+    - mac_address: 90:e2:ba:82:34:e5
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C19-1
+      switchport: Ethernet1/13
+    rack: '19'
+    rackpos: '7'
+    role: BMI
+  - height: '2'
+    manufacturer: Intel Corporation
+    model: S2600WTT
+    name: neu-19-8
+    nics:
+    - name: ipmi
+      switch_hostname: ipmi-cage19
+      switchport: GigabitEthernet 1/1/8
+      type: 1000Base-t (1GE)
+    - mac_address: 00:00:00:00:00:00
+      name: FPGA-nic
+      switch_hostname: MOC-NEU-PODB-R3C19-1
+      switchport: Ethernet2/4
+    - mac_address: 90:e2:ba:ad:99:89
+      name: nic2
+      switch_hostname: MOC-NEU-PODB-R3C19-1
+      switchport: Ethernet1/15
+    - mac_address: 90:e2:ba:ad:99:88
+      name: nic1
+      switch_hostname: MOC-NEU-PODB-R3C19-1
+      switchport: Ethernet1/16
+    rack: '19'
+    rackpos: '8'
+    role: openshift-staging
+  site: MGHPCC
+- location: Row4/PodA
+  rack: Row4/PodA/Cage21
+  servers: []
+  site: MGHPCC
+- location: Row4/PodA
+  rack: Row4/PodA/Cage23
+  servers:
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-104
+    nics:
+    - mac_address: b8:2a:72:4f:a3:6a
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/28
+    - mac_address: b8:2a:72:4f:a3:68
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/4
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 4
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-105
+    nics:
+    - mac_address: b8:2a:72:4f:a3:75
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/5
+    - mac_address: b8:2a:72:4f:a3:77
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/29
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 5
+    rack: '23'
+    role: openshift-staging
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-106
+    nics:
+    - mac_address: b8:2a:72:4f:a3:82
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/6
+    - mac_address: b8:2a:72:4f:a3:84
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/30
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 6
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-107
+    nics:
+    - mac_address: b8:2a:72:4f:a3:8f
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/7
+    - mac_address: b8:2a:72:4f:a3:91
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/31
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 7
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-108
+    nics:
+    - mac_address: b8:2a:72:4f:a3:9c
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/8
+    - mac_address: b8:2a:72:4f:a3:9e
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/32
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 8
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-109
+    nics:
+    - mac_address: b8:2a:72:4f:a3:a9
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/9
+    - mac_address: b8:2a:72:4f:a3:ab
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/33
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 9
+    rack: '23'
+    role: BMI
+  - height: '2'
+    manufacturer: Dell Inc.
+    model: PowerEdge R720
+    name: bu-23-11
+    nics:
+    - mac_address: 90:e2:ba:ad:98:50
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/17
+    - mac_address: 90:e2:ba:ad:98:51
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/21
+    rack: '23'
+    rackpos: '11'
+    role: maas
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-110
+    nics:
+    - mac_address: b8:2a:72:4f:a3:b6
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/10
+    - mac_address: b8:2a:72:4f:a3:b8
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/34
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 10
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-111
+    nics:
+    - mac_address: b8:2a:72:4f:a3:c3
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/11
+    - mac_address: b8:2a:72:4f:a3:c5
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/35
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 11
+    rack: '23'
+    role: openshift-staging
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: bu-23-115
+    nics:
+    - mac_address: b8:2a:72:4f:a3:f7
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/15
+    - mac_address: b8:2a:72:4f:a3:f9
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/39
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 15
+    rack: '23'
+    role: BMI
+  site: MGHPCC
