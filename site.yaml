@@ -7,3 +7,4 @@
 - import_playbook: chassis-devices.yaml
 - import_playbook: virtual-machine.yaml
 - import_playbook: register-system.yaml
+- import_playbook: create-static-cables.yaml

@@ -1,0 +1,9 @@
+netbox_cables:
+  - termination_a_device: rbr-07
+    termination_a_name: FortyGigabitEthernet 7/0/49
+    termination_b_device: rbr-08
+    termination_b_name: FortyGigabitEthernet 8/0/49
+  - termination_a_device: rbr-07
+    termination_a_name: FortyGigabitEthernet 7/0/50
+    termination_b_device: rbr-06
+    termination_b_name: FortyGigabitEthernet 6/0/50
