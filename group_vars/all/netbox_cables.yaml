@@ -108,3 +108,33 @@ netbox_cables:
     termination_a_name: FortyGigabitEthernet 4/0/49
     termination_b_device: rbr-03
     termination_b_name: FortyGigabitEthernet 3/0/49
+
+  - termination_a_device: rbr-03
+    termination_a_name: TenGigabitEthernet 3/0/37
+    termination_b_device: bu-21-24
+    termination_b_name: TenGigabitEthernet 1/0/40
+
+  - termination_a_device: rbr-03
+    termination_a_name: TenGigabitEthernet 3/0/40
+    termination_b_device: r4-pA-c23-nexus3548
+    termination_b_name: Ethernet1/42
+
+  - termination_a_device: bu-21-24
+    termination_a_name: FortyGigabitEthernet 1/0/51
+    termination_b_device: bu-21-23
+    termination_b_name: Eth1/36
+
+  - termination_a_device: bu-21-24
+    termination_a_name: FortyGigabitEthernet 1/0/52
+    termination_b_device: bu-21-21
+    termination_b_name: Eth1/36
+
+  - termination_a_device: r4-pA-c23-nexus3548
+    termination_a_name: Ethernet1/47
+    termination_b_device: RBridge-104
+    termination_b_name: TenGigabitEthernet 104/0/40
+
+  - termination_a_device: neu-19-40
+    termination_a_name: p3p1
+    termination_b_device: neu-17-40
+    termination_b_name: p3p1
