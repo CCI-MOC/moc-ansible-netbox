@@ -3,7 +3,138 @@ netbox_cables:
     termination_a_name: FortyGigabitEthernet 7/0/49
     termination_b_device: rbr-08
     termination_b_name: FortyGigabitEthernet 8/0/49
+
   - termination_a_device: rbr-07
     termination_a_name: FortyGigabitEthernet 7/0/50
     termination_b_device: rbr-06
     termination_b_name: FortyGigabitEthernet 6/0/50
+
+  - termination_a_device: rbr-07
+    termination_a_name: FortyGigabitEthernet 7/0/51
+    termination_b_device: MOC-NEU-PODB-R3C19-1
+    termination_b_name: Ethernet2/6
+
+  - termination_a_device: rbr-07
+    termination_a_name: FortyGigabitEthernet 7/0/52
+    termination_b_device: MOC-NEU-PODB-R3C19-1
+    termination_b_name: Ethernet2/5
+
+  - termination_a_device: rbr-07
+    termination_a_name: TenGigabitEthernet 7/0/41
+    termination_b_device: rbr-03
+    termination_b_name: TenGigabitEthernet 3/0/41
+
+  - termination_a_device: rbr-07
+    termination_a_name: TenGigabitEthernet 7/0/45
+    termination_b_device: rbr-04
+    termination_b_name: TenGigabitEthernet 4/0/45
+
+  - termination_a_device: rbr-08
+    termination_a_name: FortyGigabitEthernet 8/0/50
+    termination_b_device: rbr-05
+    termination_b_name: FortyGigabitEthernet 5/0/50
+
+  - termination_a_device: rbr-08
+    termination_a_name: FortyGigabitEthernet 8/0/51
+    termination_b_device: MOC-NEU-PODB-R3C17-1
+    termination_b_name: Ethernet2/6
+
+  - termination_a_device: rbr-08
+    termination_a_name: FortyGigabitEthernet 8/0/52
+    termination_b_device: MOC-NEU-PODB-R3C17-1
+    termination_b_name: Ethernet2/5
+
+  - termination_a_device: rbr-08
+    termination_a_name: TenGigabitEthernet 8/0/41
+    termination_b_device: rbr-04
+    termination_b_name: TenGigabitEthernet 4/0/41
+
+  - termination_a_device: rbr-08
+    termination_a_name: TenGigabitEthernet 8/0/45
+    termination_b_device: rbr-01
+    termination_b_name: TenGigabitEthernet 1/0/45
+
+  - termination_a_device: rbr-02
+    termination_a_name: FortyGigabitEthernet 2/0/49
+    termination_b_device: rbr-01
+    termination_b_name: FortyGigabitEthernet 1/0/49
+
+  - termination_a_device: rbr-02
+    termination_a_name: FortyGigabitEthernet 2/0/50
+    termination_b_device: rbr-03
+    termination_b_name: FortyGigabitEthernet 3/0/50
+
+  - termination_a_device: rbr-02
+    termination_a_name: FortyGigabitEthernet 2/0/52
+    termination_b_device: oct-hub-2
+    termination_b_name: fortyGigE 1/27/1
+
+  - termination_a_device: rbr-02
+    termination_a_name: TenGigabitEthernet 2/0/41
+    termination_b_device: rbr-06
+    termination_b_name: TenGigabitEthernet 6/0/41
+
+  - termination_a_device: rbr-02
+    termination_a_name: TenGigabitEthernet 2/0/45
+    termination_b_device: rbr-05
+    termination_b_name: TenGigabitEthernet 5/0/45
+
+  - termination_a_device: rbr-01
+    termination_a_name: FortyGigabitEthernet 1/0/50
+    termination_b_device: rbr-04
+    termination_b_name: FortyGigabitEthernet 4/0/50
+
+  - termination_a_device: rbr-01
+    termination_a_name: FortyGigabitEthernet 1/0/52
+    termination_b_device: oct-hub-1
+    termination_b_name: fortyGigE 1/27/1
+
+  - termination_a_device: rbr-01
+    termination_a_name: TenGigabitEthernet 1/0/41
+    termination_b_device: rbr-05
+    termination_b_name: TenGigabitEthernet 5/0/41
+
+  - termination_a_device: rbr-06
+    termination_a_name: FortyGigabitEthernet 6/0/49
+    termination_b_device: rbr-05
+    termination_b_name: FortyGigabitEthernet 5/0/49
+
+  - termination_a_device: rbr-06
+    termination_a_name: TenGigabitEthernet 6/0/45
+    termination_b_device: rbr-03
+    termination_b_name: TenGigabitEthernet 3/0/45
+
+  - termination_a_device: rbr-04
+    termination_a_name: FortyGigabitEthernet 4/0/49
+    termination_b_device: rbr-03
+    termination_b_name: FortyGigabitEthernet 3/0/49
+
+  - termination_a_device: rbr-03
+    termination_a_name: TenGigabitEthernet 3/0/37
+    termination_b_device: bu-21-24
+    termination_b_name: TenGigabitEthernet 1/0/40
+
+  - termination_a_device: rbr-03
+    termination_a_name: TenGigabitEthernet 3/0/40
+    termination_b_device: r4-pA-c23-nexus3548
+    termination_b_name: Ethernet1/42
+
+  - termination_a_device: bu-21-24
+    termination_a_name: FortyGigabitEthernet 1/0/51
+    termination_b_device: bu-21-23
+    termination_b_name: Eth1/36
+
+  - termination_a_device: bu-21-24
+    termination_a_name: FortyGigabitEthernet 1/0/52
+    termination_b_device: bu-21-21
+    termination_b_name: Eth1/36
+
+  - termination_a_device: r4-pA-c23-nexus3548
+    termination_a_name: Ethernet1/47
+    termination_b_device: RBridge-104
+    termination_b_name: TenGigabitEthernet 104/0/40
+
+  - termination_a_device: neu-19-40
+    termination_a_name: p3p1
+    termination_b_device: neu-17-40
+    termination_b_name: p3p1
