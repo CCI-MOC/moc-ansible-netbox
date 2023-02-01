@@ -2317,6 +2317,57 @@ netbox_servers:
   - height: '0'
     manufacturer: Dell Inc.
     model: PowerEdge M620
+    name: bu-23-101
+    nics:
+    - mac_address: b8:2a:72:4f:a3:43
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/25
+    - mac_address: b8:2a:72:4f:a3:41
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/1
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 1
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: dell-2
+    nics:
+    - mac_address: b8:2a:72:4f:a3:50
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/26
+    - mac_address: b8:2a:72:4f:a3:4e
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/2
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 2
+    rack: '23'
+    role: esi
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: dell-3
+    nics:
+    - mac_address: b8:2a:72:4f:a3:5d
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/27
+    - mac_address: b8:2a:72:4f:a3:5b
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/3
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 3
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
     name: bu-23-104
     nics:
     - mac_address: b8:2a:72:4f:a3:6a
@@ -2416,22 +2467,6 @@ netbox_servers:
     parent_device_bay: Slot 9
     rack: '23'
     role: BMI
-  - height: '2'
-    manufacturer: Dell Inc.
-    model: PowerEdge R720
-    name: bu-23-11
-    nics:
-    - mac_address: 90:e2:ba:ad:98:50
-      name: nic1
-      switch_hostname: r4-pA-c23-nexus3548
-      switchport: Ethernet1/17
-    - mac_address: 90:e2:ba:ad:98:51
-      name: nic2
-      switch_hostname: r4-pA-c23-nexus3548
-      switchport: Ethernet1/21
-    rack: '23'
-    rackpos: '11'
-    role: maas
   - height: '0'
     manufacturer: Dell Inc.
     model: PowerEdge M620
@@ -2469,6 +2504,57 @@ netbox_servers:
   - height: '0'
     manufacturer: Dell Inc.
     model: PowerEdge M620
+    name: dell-12
+    nics:
+    - mac_address: b8:2a:72:4f:a3:d2
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/36
+    - mac_address: b8:2a:72:4f:a3:d0
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/12
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 12
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: dell-13
+    nics:
+    - mac_address: b8:2a:72:4f:a3:df
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/37
+    - mac_address: b8:2a:72:4f:a3:dd
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/13
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 13
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: dell-14
+    nics:
+    - mac_address: b8:2a:72:4f:a3:ec
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/38
+    - mac_address: b8:2a:72:4f:a3:ea
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/14
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 14
+    rack: '23'
+    role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
     name: bu-23-115
     nics:
     - mac_address: b8:2a:72:4f:a3:f7
@@ -2483,4 +2569,37 @@ netbox_servers:
     parent_device_bay: Slot 15
     rack: '23'
     role: BMI
+  - height: '0'
+    manufacturer: Dell Inc.
+    model: PowerEdge M620
+    name: dell-16
+    nics:
+    - mac_address: b8:2a:72:4f:a4:06
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/40
+    - mac_address: b8:2a:72:4f:a4:04
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/16
+    parent_device: kumo_dell_blades
+    parent_device_bay: Slot 16
+    rack: '23'
+    role: BMI
+  - height: '2'
+    manufacturer: Dell Inc.
+    model: PowerEdge R720
+    name: bu-23-11
+    nics:
+    - mac_address: 90:e2:ba:ad:98:50
+      name: nic1
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/17
+    - mac_address: 90:e2:ba:ad:98:51
+      name: nic2
+      switch_hostname: r4-pA-c23-nexus3548
+      switchport: Ethernet1/21
+    rack: '23'
+    rackpos: '11'
+    role: maas
   site: MGHPCC
