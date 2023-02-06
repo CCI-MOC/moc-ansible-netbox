@@ -166,7 +166,7 @@ all:
           device_type: M1000e
           number_of_bays: 16
           location: Row4/PodA
-          height: 8
+          height: 10
           rack_number: 23
           rackpos: 1
           manufacturer: Dell Inc.
